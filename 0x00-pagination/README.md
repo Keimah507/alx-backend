@@ -15,7 +15,7 @@ For example index_range(page=1, page_size=7) should return the tuple (0, 7), ind
 
 Page numbers are 1-indexed, i.e. the first page is page 1.
 
-### [1. Simple pagination mandatory ](./ 1-simple_pagination.py)
+### [1. Simple pagination mandatory ](./1-simple_pagination.py)
 Copy index_range from the previous task and the following class into your code
 ```
 
