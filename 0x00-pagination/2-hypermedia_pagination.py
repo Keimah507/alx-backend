@@ -11,8 +11,10 @@ class Server:
     """
     DATA_FILE = "Popular_Baby_Names.csv"
 
+
     def __init__(self):
         self.__dataset = None
+
 
     def dataset(self) -> List[List]:
         """Cached dataset
@@ -24,6 +26,7 @@ class Server:
             self.__dataset = dataset[1:]
 
         return self.__dataset
+
 
     def get_page(self, page: int = 1, page_size: int = 10) -> List[List]:
         """Finds the correct indexes to paginate the dataset correctly 
@@ -37,6 +40,7 @@ class Server:
         if e > len(server.dataset()):
             return []
         return (server.dataset()[s: e])
+
 
     def get_hyper(self, page: int = 1, page_size: int = 10) -> Dict:
         """
@@ -61,6 +65,7 @@ class Server:
             "total_pages": total_pages
         }
         return res
+
 
 def index_range(page: int, page_size: int) -> Tuple[int, int]:
     """returns a tuple of size 2 containing a start index and an end index"""
