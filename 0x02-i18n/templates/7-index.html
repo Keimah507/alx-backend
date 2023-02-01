@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{gettext('$(home_title)')}}</title>
+</head>
+<body>
+<h1>{{gettext('$(home_header)')}}</h1>
+  {% if user %}
+    <p>{{gettext(%'(logged_in_as)'), username=user.name}}</p>
+  {% else %}
+    <p>{{gettext('%(not logged in)')}}</p>
+</body>
+</html>
